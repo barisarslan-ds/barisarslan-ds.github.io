@@ -3,11 +3,11 @@
    tweak these six values to re-skin the whole page
    ───────────────────────────────────────────── */
 :root{
-  --bg:        #0c0e10;
-  --bg-alt:    #111417;
-  --fg:        #e8e6e3;
-  --muted:     #8b9196;
-  --line:      #22272b;
+  --bg:        #000000;
+  --bg-alt:    #000000;
+  --fg:        #ffffff;
+  --muted:     #9a9a9a;
+  --line:      #2a2a2a;
   --accent:    #7dd3c0;
 
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -44,7 +44,7 @@ code{ font-family:var(--mono); font-size:.85em; color:var(--accent); }
 }
 .side{ display:flex; align-items:center; padding:clamp(2rem,5vw,5rem); }
 .left{ border-right:1px solid var(--line); }
-.right{ background:var(--bg-alt); }
+.right{ background:var(--bg); }
 .left-inner{ width:100%; max-width:26rem; }
 .right-inner{
   width:100%; max-width:32rem; min-height:66vh;
@@ -93,7 +93,7 @@ code{ font-family:var(--mono); font-size:.85em; color:var(--accent); }
 }
 .menu-item .idx{
   font-family:var(--mono); font-size:.7rem; letter-spacing:.1em;
-  color:var(--line); transition:color .18s ease;
+  color:#3a3a3a; transition:color .18s ease;
 }
 .menu-item .label{
   font-size:clamp(1.5rem,3.4vw,2.1rem);
@@ -119,7 +119,7 @@ code{ font-family:var(--mono); font-size:.85em; color:var(--accent); }
 .muted{ color:var(--muted); }
 .small{ font-size:.78rem; }
 .hint{
-  font-family:var(--mono); font-size:.8rem; color:var(--line);
+  font-family:var(--mono); font-size:.8rem; color:#3a3a3a;
   letter-spacing:.1em; margin:0;
 }
 .caret{
@@ -128,15 +128,6 @@ code{ font-family:var(--mono); font-size:.85em; color:var(--accent); }
   animation:blink 1.2s steps(1) infinite;
 }
 @keyframes blink{ 50%{ opacity:0; } }
-
-.ghost-btn{
-  display:inline-block; margin-top:.4rem;
-  font-family:var(--mono); font-size:.78rem; letter-spacing:.08em;
-  padding:.55rem .9rem; border:1px solid var(--line); border-radius:2px;
-  color:var(--accent);
-  transition:border-color .18s ease, background .18s ease;
-}
-.ghost-btn:hover{ border-color:var(--accent); background:rgba(125,211,192,.07); }
 
 /* ── repo list ────────────────────────────── */
 .repo-tools{ margin:-.6rem 0 .9rem; }
@@ -152,7 +143,7 @@ code{ font-family:var(--mono); font-size:.85em; color:var(--accent); }
 .repo-desc{ margin:.3rem 0 0; font-size:.85rem; color:var(--muted); line-height:1.5; }
 .repo-meta{
   margin-top:.45rem; display:flex; flex-wrap:wrap; gap:.9rem;
-  font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; color:var(--line);
+  font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; color:#5a5a5a;
 }
 .repo-meta b{ font-weight:400; color:var(--muted); }
 .dot{ display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--muted); margin-right:.35rem; vertical-align:-1px; }

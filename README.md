@@ -13,7 +13,6 @@ main.js      hash routing + live GitHub repo list
 - **theme** — the six CSS variables at the top of `styles.css` (`--bg`, `--fg`, `--accent`, …).
 - **name / links / tagline** — the `.left` section of `index.html`.
 - **projects** — pulled live from `api.github.com`. To hide a repo, add its name to `HIDE` in `main.js`. Forks are hidden by default (`SHOW_FORKS`).
-- **resume** — drop `resume.pdf` in the repo root. The page probes for it and the download button appears on its own; then delete the placeholder sentence in the `resume` view in `index.html`.
 
 ## deploy
 

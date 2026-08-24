@@ -25,28 +25,11 @@ function show(name) {
   items.forEach(i => i.classList.toggle("active", i.dataset.view === name));
 
   if (name === "projects" && !projectsLoaded) { projectsLoaded = true; loadRepos(); }
-  if (name === "resume") checkResume();
 }
 
 function route() { show(location.hash.replace(/^#\/?/, "") || "home"); }
 addEventListener("hashchange", route);
 route();
-
-/* ─────────────────────────────────────────────
-   resume — reveals the button only if the file exists
-   ───────────────────────────────────────────── */
-let resumeChecked = false;
-async function checkResume() {
-  if (resumeChecked) return;
-  resumeChecked = true;
-  try {
-    const r = await fetch("resume.pdf", { method: "HEAD" });
-    if (!r.ok) return;
-    document.getElementById("resume-link").hidden = false;
-    const ph = document.getElementById("resume-placeholder");
-    if (ph) ph.hidden = true;
-  } catch (_) { /* no file, no button */ }
-}
 
 /* ─────────────────────────────────────────────
    github repos
